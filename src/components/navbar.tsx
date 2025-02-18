@@ -11,7 +11,9 @@ const nippo = localFont({
 const Navbar = () => {
   const pathname = usePathname();
   return (
-    <nav className="nav w-full px-[3%] py-2 tracking-tight flex justify-between items-center fixed top-0 left-0 z-50 text-white">
+    <nav className={`w-full px-[3%] py-2 tracking-tight flex justify-between items-center fixed top-0 left-0 z-50 text-white
+      bg-white/10 backdrop-blur-md shadow-md`}
+    >
       <Link href="/" className={`${nippo.className} text-3xl font-medium`}>
         Xapler
       </Link>
