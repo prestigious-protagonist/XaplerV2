@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import HeroSection from "@/components/ui/HeroSection";
-
+import ChatSection from "@/components/ui/ChatSection";
 export default function Home() {
     const [showComponent, setShowComponent] = useState(true);
 
@@ -14,7 +14,9 @@ export default function Home() {
     return (
         <div className="relative h-screen">
             {/* Hide main content while HeroSection is visible */}
-            {!showComponent && <div className="pt-[50px]">Home page</div>}
+            {!showComponent && <div>
+                                     <ChatSection />
+                                </div>}
 
             <AnimatePresence>
                 {showComponent && (

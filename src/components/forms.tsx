@@ -34,11 +34,13 @@ export default function FormComponent() {
             
         }, withCredentials: true
       });
+      console.log("Response is: "+response)
       toast(response.data.message)
       if (response.data.success) {
         router.push('/home');
       }
     } catch (error: unknown) {
+      console.log(error)
       if (axios.isAxiosError(error)) {
         toast.error(error.response?.data?.message || "Invalid request. Please check your input.");
       } else if (error instanceof Error) {
